@@ -24,7 +24,7 @@ function Scanner() {
 
     const checkValid = async (decodedQR) => {
         try {
-            const response = await axios.get(`http://localhost:5200/api/validate/getqr?qr=${decodedQR}`);
+            const response = await axios.get(`https://event-link-validator-m0vsr07zb-dharshinis-projects-be5ade61.vercel.app/?vercelToolbarCode=MNRCFvk_llnRCeK/api/validate/getqr?qr=${decodedQR}`);
             setDetail(response.data.eventdetail);
             setShowModal(true); 
         } catch (err) {
