@@ -37,7 +37,7 @@ function Scanner() {
     };
 
     const onScanFailure = (error) => {
-        console.warn(`QR code scan error: ${error}`);
+        // console.warn(`QR code scan error: ${error}`);
     };
 
     const closeModal = () => {
