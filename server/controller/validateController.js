@@ -9,8 +9,16 @@ const getQR = async (req, res) => {
            return res.json({ message: 'QR Not Found'});
         }
         const data=find?.[0];
-        await data.updateOne({enteredstatus:"Checked-IN"})
-        res.json({message:"QR Found",eventdetail:find?.[0]});
+        let currentDate = new Date();
+        let year = currentDate.getFullYear();
+        let month = currentDate.getMonth() + 1;
+        let day = currentDate.getDate();
+        let hours = currentDate.getHours();
+        let minutes = currentDate.getMinutes();
+        if (data.enteredstatus === "Not-Checked-IN") {
+            await data.updateOne({ enteredstatus: `Checked-IN at ${hours}:${minutes} on  ${day}/${month}/${year}` })
+        }
+        res.json({ message: "QR Found", eventdetail: find?.[0] });
     } catch (err) {
         console.log(err);
         res.status(500).json({ message: 'Server error' });
