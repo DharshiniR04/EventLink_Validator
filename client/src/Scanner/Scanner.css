@@ -10,7 +10,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-top: 100px;
   width: 100%;
-  max-width: 600px; /* Limit width for larger screens */
+  max-width: 600px; 
 }
 
 .qrscanner-heading {
@@ -58,57 +58,73 @@
   padding: 20px;
   border-radius: 5px;
   max-width: 500px;
-  width: 90%; /* Adjusted for mobile */
+  width: 90%; 
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   animation: slideIn 0.3s;
-  max-height: 80vh; /* Limit modal height to 80% of the viewport */
-  overflow-y: auto; /* Allow scrolling inside modal */
+  max-height: 80vh; 
+  overflow-y: auto;
 }
 
 .event-detail {
-  margin-top: 15px; /* Space between event details */
-  border-top: 1px solid #e0e0e0; /* Divider between events */
+  margin-top: 15px; 
+  border-top: 1px solid #e0e0e0;
   padding-top: 10px;
-  max-height: 300px; /* Set a fixed height for the event details section */
-  overflow-y: auto; /* Make the event details scrollable */
+  max-height: 300px; 
+  overflow-y: auto; 
 }
 
 .event-detail h4 {
-  margin: 10px 0 5px; /* Margin adjustments for event heading */
+  margin: 10px 0 5px; 
   font-size: 1.2rem;
-  color: #555; /* Color for event titles */
+  color: #555; 
 }
 
 .event-detail p {
-  margin: 5px 0; /* Space between paragraphs */
-  color: #666; /* Text color for event details */
+  margin: 5px 0; 
+  color: #666; 
 }
 
+.status-box {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.green-box {
+  background-color: #4caf50; 
+}
+
+.red-box {
+  background-color: #f44336; 
+}
 
 @media (max-width: 600px) {
   .modal-content {
-    width: 75%; /* Ensure modal content fits better on mobile */
+    width: 75%; 
     max-width: 95%;
-    padding: 15px; /* Slightly reduce padding on mobile */
+    padding: 15px; 
   }
 
   .event-detail {
-    max-height: 200px; /* Reduce height on mobile for better fit */
+    max-height: 200px; 
   }
 
   .qrscanner-heading {
-    font-size: 20px; /* Reduce heading size for smaller screens */
+    font-size: 20px; 
     margin-top: 30px;
     margin-bottom: 15px;
   }
 
   .close-button {
-    font-size: 1.2rem; /* Reduce close button size for mobile */
+    font-size: 1.2rem; 
   }
 
   .event-detail h4 {
-    font-size: 1rem; /* Adjust font size for mobile */
+    font-size: 1rem; 
   }
 
   .event-detail p {
