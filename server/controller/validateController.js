@@ -8,6 +8,8 @@ const getQR = async (req, res) => {
         if(!find){
            return res.json({ message: 'QR Not Found'});
         }
+        const data=find?.[0];
+        await data.updateOne({enteredstatus:"Checked-IN"})
         res.json({message:"QR Found",eventdetail:find?.[0]});
     } catch (err) {
         console.log(err);
