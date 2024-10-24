@@ -59,9 +59,9 @@ function Scanner() {
                         <p><strong>College:</strong> {detail?.college}</p>
                         <p><strong>Department:</strong> {detail?.registereddepartment}</p>
                         <p><strong>Payment Status:</strong> {detail?.paymentstatus}</p>
-                        <div className={`status-box ${detail?.enteredstatus === "Checked-IN" ? 'green-box' : 'red-box'}`}>
-                          <p><strong>Checked-IN:</strong> {detail?.enteredstatus === "Checked-IN" ? "YES" : "NO"}</p>
-                        </div>
+                         <div className={`status-box ${detail?.enteredstatus === "Not-Checked-IN" ? 'red-box' : 'green-box'}`}>
+                          <p> {detail?.enteredstatus === "Not-Checked-IN" ? "Not-Checked-IN":detail?.enteredstatus}</p>
+                         </div>
                         {detail?.events && detail?.events.map((event, index) => (
                             <div key={index} className="event-detail">
                                 <h4>Event {index + 1}:</h4>
