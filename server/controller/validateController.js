@@ -13,7 +13,7 @@ const getQR = async (req, res) => {
         let year = currentDate.getFullYear();
         let month = currentDate.getMonth() + 1;
         let day = currentDate.getDate();
-        let options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        let options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit'};
         let indiaTime = currentDate.toLocaleString('en-US', options);
 
         if (data.enteredstatus === "Not-Checked-IN") {
