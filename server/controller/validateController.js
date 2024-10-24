@@ -13,10 +13,11 @@ const getQR = async (req, res) => {
         let year = currentDate.getFullYear();
         let month = currentDate.getMonth() + 1;
         let day = currentDate.getDate();
-        let hours = currentDate.getHours();
-        let minutes = currentDate.getMinutes();
+        let options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        let indiaTime = currentDate.toLocaleString('en-US', options);
+
         if (data.enteredstatus === "Not-Checked-IN") {
-            await data.updateOne({ enteredstatus: `Checked-IN at ${hours}:${minutes} on  ${day}/${month}/${year}` })
+            await data.updateOne({ enteredstatus: `Checked-IN at ${indiaTime} on ${day}/${month}/${year}` })
         }
         res.json({ message: "QR Found", eventdetail: find?.[0] });
     } catch (err) {
